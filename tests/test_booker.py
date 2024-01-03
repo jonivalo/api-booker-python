@@ -1,5 +1,7 @@
 from playwright.sync_api import APIRequestContext
 
+# Use the command pytest -v -s to run the test cases with output displayed.
+
 def test_post(api_context: APIRequestContext):
     data = {
         "firstname": "John",
@@ -21,6 +23,8 @@ def test_post(api_context: APIRequestContext):
     assert new_booking.status == 200
 
 # Add the ID from the 'post' command to the 'get', 'put' or 'delete' command ("/booking/ + booking_ID")
+
+
 
 # def test_get(api_context: APIRequestContext):
 #     bookings = api_context.get(
